@@ -1,0 +1,113 @@
+# -------------------------------------------------------------------------- #
+#
+# Copyright (C) 2020  Intel Corporation. All rights reserved.
+# Your use of Intel Corporation's design tools, logic functions 
+# and other software and tools, and any partner logic 
+# functions, and any output files from any of the foregoing 
+# (including device programming or simulation files), and any 
+# associated documentation or information are expressly subject 
+# to the terms and conditions of the Intel Program License 
+# Subscription Agreement, the Intel Quartus Prime License Agreement,
+# the Intel FPGA IP License Agreement, or other applicable license
+# agreement, including, without limitation, that your use is for
+# the sole purpose of programming logic devices manufactured by
+# Intel and sold by Intel or its authorized distributors.  Please
+# refer to the applicable agreement for further details, at
+# https://fpgasoftware.intel.com/eula.
+#
+# -------------------------------------------------------------------------- #
+#
+# Quartus Prime
+# Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+# Date created = 17:43:33  May 18, 2025
+#
+# -------------------------------------------------------------------------- #
+#
+# Notes:
+#
+# 1) The default values for assignments are stored in the file:
+#		LAB4_assignment_defaults.qdf
+#    If this file doesn't exist, see file:
+#		assignment_defaults.qdf
+#
+# 2) Altera recommends that you do not modify this file. This
+#    file is updated automatically by the Quartus Prime software
+#    and any changes you make may be lost or overwritten.
+#
+# -------------------------------------------------------------------------- #
+
+
+set_global_assignment -name FAMILY "Cyclone V"
+set_global_assignment -name DEVICE 5CSXFC6D6F31C6
+set_global_assignment -name TOP_LEVEL_ENTITY ALU
+set_global_assignment -name ORIGINAL_QUARTUS_VERSION 20.1.1
+set_global_assignment -name PROJECT_CREATION_TIME_DATE "17:43:33  MAY 18, 2025"
+set_global_assignment -name LAST_QUARTUS_VERSION "20.1.1 Lite Edition"
+set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
+set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
+set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
+set_global_assignment -name ERROR_CHECK_FREQUENCY_DIVISOR 256
+set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
+set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
+set_global_assignment -name VHDL_INPUT_VERSION VHDL_2008
+set_global_assignment -name VHDL_SHOW_LMF_MAPPING_MESSAGES OFF
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_location_assignment PIN_AH5 -to PWM_pulse
+set_location_assignment PIN_AA24 -to Nflag_o
+set_location_assignment PIN_AB23 -to Cflag_o
+set_location_assignment PIN_AC23 -to Zflag_o
+set_location_assignment PIN_AD24 -to Vflag_o
+set_location_assignment PIN_AF25 -to ALUFN_i[0]
+set_location_assignment PIN_AE24 -to ALUFN_i[1]
+set_location_assignment PIN_AF24 -to ALUFN_i[2]
+set_location_assignment PIN_AB22 -to ALUFN_i[3]
+set_location_assignment PIN_AC22 -to ALUFN_i[4]
+set_location_assignment PIN_AA15 -to rst
+set_location_assignment PIN_AC29 -to ena
+set_location_assignment PIN_AF14 -to clk
+set_location_assignment PIN_AD21 -to ALUout_o[0]
+set_location_assignment PIN_AG22 -to ALUout_o[1]
+set_location_assignment PIN_AE22 -to ALUout_o[2]
+set_location_assignment PIN_AE23 -to ALUout_o[3]
+set_location_assignment PIN_AG23 -to ALUout_o[4]
+set_location_assignment PIN_AF23 -to ALUout_o[5]
+set_location_assignment PIN_AH22 -to ALUout_o[6]
+set_location_assignment PIN_AF21 -to ALUout_o[7]
+set_location_assignment PIN_W17 -to X_i[0]
+set_location_assignment PIN_V18 -to X_i[1]
+set_location_assignment PIN_AG17 -to X_i[2]
+set_location_assignment PIN_AG16 -to X_i[3]
+set_location_assignment PIN_AH17 -to X_i[4]
+set_location_assignment PIN_AG18 -to X_i[5]
+set_location_assignment PIN_AH18 -to X_i[6]
+set_location_assignment PIN_AF16 -to X_i[7]
+set_location_assignment PIN_AA21 -to Y_i[0]
+set_location_assignment PIN_AB17 -to Y_i[1]
+set_location_assignment PIN_AA18 -to Y_i[2]
+set_location_assignment PIN_Y17 -to Y_i[3]
+set_location_assignment PIN_Y18 -to Y_i[4]
+set_location_assignment PIN_AF18 -to Y_i[5]
+set_location_assignment PIN_W16 -to Y_i[6]
+set_location_assignment PIN_Y19 -to Y_i[7]
+set_global_assignment -name SIP_FILE PLL_clk.sip
+set_global_assignment -name SOURCE_FILE PLL_clk.cmp
+set_global_assignment -name SDC_FILE SDC1.sdc
+set_global_assignment -name QIP_FILE PLL_clk.qip
+set_global_assignment -name VHDL_FILE CounterEnvelope.vhd
+set_global_assignment -name VHDL_FILE counter.vhd
+set_global_assignment -name VHDL_FILE DUT/TopPureLogicWithoutPLL.vhd
+set_global_assignment -name VHDL_FILE DUT/TopIO_Interface.vhd
+set_global_assignment -name VHDL_FILE DUT/Shifter.vhd
+set_global_assignment -name VHDL_FILE DUT/SevenSegDecoder.vhd
+set_global_assignment -name VHDL_FILE DUT/PWMunit_with_PLL.vhd
+set_global_assignment -name VHDL_FILE DUT/PWMunit.vhd
+set_global_assignment -name VHDL_FILE DUT/PLL_clk.vhd
+set_global_assignment -name VHDL_FILE DUT/PLL.vhd
+set_global_assignment -name VHDL_FILE DUT/Logic.vhd
+set_global_assignment -name VHDL_FILE DUT/FA.vhd
+set_global_assignment -name VHDL_FILE DUT/aux_package.vhd
+set_global_assignment -name VHDL_FILE DUT/ALU.vhd
+set_global_assignment -name VHDL_FILE DUT/AdderSub.vhd
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
